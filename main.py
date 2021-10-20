@@ -1,8 +1,11 @@
 import logging
 from telegram.ext import *
 import responses
+import os
+from dotenv import load_dotenv
 
-API_KEY = '1977973816:AAGxaFKhIikcf8xm2gccZKHAAVunSUKRGqE'
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
 
 # Set up the logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
